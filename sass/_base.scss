@@ -1,0 +1,119 @@
+*{
+  @include box-sizing(border-box);
+  outline: none;
+  text-decoration: none;
+  border-style: none;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  @include font-size(14);
+  color: $mainFontColor;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f4f8fb;
+}
+
+/* ------------- container ------------------*/
+
+.container{
+  width: 1180px;
+  margin: 0 auto;
+  @media screen and (max-width: $break-large)
+  {
+    width: 100%;
+    padding: 30px 25px;
+  }
+}
+
+/* ------------- titre et sous-titre ------------------*/
+
+h2{
+  @include font-size(70); /* mixin */
+  font-weight: lighter;
+  @media screen and (max-width: $break-small)
+  {
+    @include font-size(40);
+  }
+}
+
+h3{
+  @include font-size(40); /* mixin */
+  font-weight: lighter;
+}
+
+h4{
+  @include font-size(30); /* mixin */
+  font-weight: lighter;
+}
+
+/* ------------- largeur blocs ------------------*/
+
+.w-23{
+  width: 23%;
+}
+
+.w-31{
+  width: 31%;
+}
+
+.w-38{
+  width: 38%;
+}
+
+.w-50{
+  width: 50%;
+}
+
+.w-62{
+  width: 62%;
+}
+
+.w-590px{
+  width: 590px;
+  @media screen and (max-width: 1200px)
+   {
+     width: 100%;
+   }
+}
+
+.w-23,.w-31,.w-38,.w-50,.w-62{
+@media screen and (max-width: $break-medium)
+   {
+     width: 100%;
+   }
+}
+
+/* ------------- bouton principal ------------------*/
+
+.mainButton{
+  @include border-radius(22px);
+  height: 44px;
+  width: 165px;
+  background-color: $mainGreen;
+  padding: 0;
+  @include font-size(14);
+  font-family: 'Open Sans', sans-serif;
+  color: $mainFontColor;
+  margin-top: 15px;
+  &:hover{
+    background-color: transparent;
+    color: $mainGreen;
+    border: 1px solid $mainGreen;
+  }
+
+}
+
+input[type="submit"], button{
+  cursor: pointer;
+}
+
+/* ------------- span pour les principales intro ------------------*/
+
+.text_intro{
+    color: $thirdFontColorLight;
+    @include font-size(20); 
+    font-weight: lighter;
+}

@@ -1,0 +1,21 @@
+.mainLogo{
+	@include retina-sprite(main-logo);
+}
+.submitSearch{
+	@include retina-sprite(loupe);
+}
+.numbersIcon1{
+	@include retina-sprite(stylo);
+}
+.numbersIcon2{
+	@include retina-sprite(vectors);
+}
+.numbersIcon3{
+	@include retina-sprite(pinceau);
+}
+.numbersIcon4{
+	@include retina-sprite(loupe-verte);
+}
+.cloud{
+	@include retina-sprite(cloud);
+}

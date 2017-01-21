@@ -1,0 +1,99 @@
+footer{
+	background-color: #1a2124;	
+	padding: 90px 0 140px 0;
+	color: #f6f7fa;
+	.container{
+		@include display-flex;
+
+/*------------ paragraphe get in touch ------------*/
+
+		.section_text_1{
+			margin-bottom: 70px;
+			b{
+				font-weight: 600;
+			}
+		}
+
+/*--------------------- lien --------------------*/
+
+		.section_text_2{
+			table{
+				width: 100%;
+				border-bottom-spacing: 10px;
+				tr{
+					th{
+						padding-bottom: 20px;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+
+/*----------------- newsletter----------------*/
+
+		.section_text_3{
+			padding: 0 0 0 120px;
+			p{
+				b{
+				font-weight: 600;
+				}
+			}
+			.newsletter{
+				@include display-flex;
+				margin-bottom: 20px;
+				input{
+					height: 60px;
+					&[type="text"]{
+						width: 400px;
+						padding: 0 15px;
+						@include font-size(14);
+						color: $mainPurple;
+					}
+					&[type="submit"]{
+						width: 69px;
+						background-color: $mainPurple;
+						border: 1px solid $mainPurple;
+						color: #f6f7fa;
+						font-size: 30px;
+    					font-family: Devanagari MT;
+    					padding-top: 12px;
+						&:hover{
+							background-color: transparent;
+							border: 1px solid $mainPurple;
+						}
+					}
+				}
+			}
+		}
+		
+	}
+
+/*	version mobile et tablette  */
+
+	@media screen and (max-width: $break-medium)
+	{
+		padding: 30px 25px;
+		.container{
+			flex-direction: column;
+			padding: 0;
+			.section_text_1{
+				margin-bottom: 40px;
+			}
+			.section_text_2{
+				flex-direction: column;
+			}
+			.section_text_3{
+				padding: 0;
+				margin-top: 40px;
+				.nesletter{
+					input[type="text"]{
+						width: 80%;
+					}
+					input[type="text"]{
+						width: 20%;
+					}
+				}
+			}
+		} 	
+	}
+}

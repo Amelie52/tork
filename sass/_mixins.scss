@@ -1,0 +1,17 @@
+/* px to rem*/
+
+@mixin font-size($sizeValue: 16, $line: $sizeValue * 1.7){
+  font-size: ($sizeValue) + px;
+  line-height: ($line) + px;
+  font-size: ($sizeValue / 10) + rem;
+  line-height: ($line / 10) + rem;
+  }
+
+/*background cover*/
+
+@mixin background($url){
+	background: url($url);
+  	background-size: cover;
+  	background-position: 50% 50%;
+  	background-repeat: no-repeat;
+}
